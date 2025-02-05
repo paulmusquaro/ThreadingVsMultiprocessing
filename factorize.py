@@ -1,6 +1,7 @@
 import time
 from multiprocessing import Pool, cpu_count
 
+
 def factorize(number):
     factors = []
     for i in range(1, number + 1):

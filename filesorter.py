@@ -4,6 +4,7 @@ from shutil import copyfile
 from threading import Thread
 import logging
 
+
 source_folder = None
 output_folder = "dist"
 
@@ -14,7 +15,7 @@ for i in range(len(sys.argv)):
         output_folder = sys.argv[i + 1]
 
 if source_folder is None:
-    print("Потрібно вказати шлях до директорії --source")
+    print("You need to specify the path to the directory --source")
     sys.exit(1)
 
 source = Path(source_folder)
@@ -52,4 +53,4 @@ if __name__ == "__main__":
         threads.append(th)
 
     [th.join() for th in threads]
-    print(f"Можна видалити {source}")
+    print(f"Can be deleted {source}")
